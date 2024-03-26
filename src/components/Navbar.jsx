@@ -3,14 +3,19 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { saveAs } from "file-saver";
+// import "../../public/logo192.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
+  const downloadImage = () => {
+    saveAs("MyResume.pdf", "resume-mahdirezaei.pdf");
+  };
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
-      <div>MR</div>
+      <div></div>
 
       {/* menu */}
       <ul className="hidden md:flex">
@@ -60,25 +65,21 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          {" "}
           <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          {" "}
           <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          {" "}
           <Link onClick={handleClick} to="work" smooth={true} duration={500}>
             Work
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          {" "}
           <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -104,21 +105,11 @@ const Navbar = () => {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
-            <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
-            >
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
-            <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
+          <li
+            className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]"
+            onClick={downloadImage}
+          >
+            Resume <BsFillPersonLinesFill size={30} />
           </li>
         </ul>
       </div>
