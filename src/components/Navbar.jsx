@@ -14,7 +14,7 @@ const Navbar = () => {
     saveAs("MyResume.pdf", "resume-mahdirezaei.pdf");
   };
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between md:justify-center items-center px-4 bg-[#0a192f] text-gray-300">
       <div></div>
 
       {/* menu */}
