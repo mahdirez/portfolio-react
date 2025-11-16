@@ -20,7 +20,7 @@ const About = () => {
           </div>
           <div>
             <p>
-              I'm 23 and love learning and solving problems.I primarily focus on
+              I'm 25 and love learning and solving problems.I primarily focus on
               writing clean, elegant, and efficient code. I have mastered Html,
               Css, Js and React and currently trying to perfect my knowledge for
               Next Js. I have been working as front-end developer for more 1
